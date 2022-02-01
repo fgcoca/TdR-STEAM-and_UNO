@@ -1,0 +1,120 @@
+# 1. Información del Taller
+site_name: Retos con TdR-STEAM y keyestudio UNO
+site_description: Retos realizados a partir de una placa tipo Arduino UNO y la shield Imagina TdR-STEAM V2.0 y alguna teoría de la necesaria
+site_author: Federico Coca
+site_url: https://fgcoca.github.io/TdR-STEAM-and_UNO/
+
+# 2. Repositorio
+repo_name: fgcoca/TdR-STEAM-and_UNO
+repo_url: https://github.com/fgcoca/TdR-STEAM-and_UNO
+edit_uri: ""
+
+# 3. Copyright
+copyright: Copyright &copy; 2022 - 2030 Federico Coca
+
+# 4. RRSS
+# extra:
+#  social:
+#    - type: 'github'
+#      link: 'https://github.com/fgcoca'
+#    - type: 'twitter'
+#      link: 'https://twitter.com/fgcoca'
+
+# 5. Navegación
+nav:
+  - Introducción: index.md
+  - Algo de teoría:
+    - Software: soft.md
+    - Hardware TdR STEAM: hard.md
+    - Elementos impresión 3D: 3D.md
+    - Operadores en programación C++: operadores.md
+    - Teoría básica de IoT: IoT_basico.md
+  - Colección de retos y actividades:
+    - Reto-01. LED: R01.md
+    - Reto-02. LEDs rojo y azul: R02.md
+    - Reto-03. LED RGB: R03.md
+    - Reto-04. Zumbador: R04.md
+    - Reto-05. Pulsadores: R05.md
+    - Reto-06. Potenciómetro: R06.md
+    - Reto-07. Fotorresistencia LDR: R07.md
+    - Reto-08. Sensor de temperatura LM35: R08.md
+    - Reto-09. Sensor de temperatura y humedad DHT-11: R09.md
+    - Reto-10. Emisor y receptor de infrarrojos: R10.md
+  - Todos los programas de los retos: retos.md
+  - Miscelanea:
+    - Autor: Miscelanea/about.md 
+    - Licencias: Miscelanea/lic.md
+    - Webgrafia/Bibliografía: Miscelanea/webgrafia.md
+    - Software utilizado: Miscelanea/soft.md
+
+# 6. Google Analytics
+#google_analytics:
+#  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#  - auto
+
+# 7. Configuración del tema
+theme:
+  name: material
+  # Color - Fuentes - Lenguaje
+  palette:
+    primary: light blue
+    accent: deep purple 
+  font:
+    text: Roboto 
+    code: Roboto Mono 
+  logo: img/favicon.png 
+  favicon: img/favicon.png 
+  language: es
+  extra:
+    search:
+      language: es, en
+  # Página 404
+  static_templates:
+    - 404.html
+  # No incluir los JavaScript de MkDocs
+  #include_search_page: false
+  #search_index_only: true
+
+# 8. Extensiones
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      linenums: true
+      # guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# 9. Necesario para la extensión pydownx.arithmatex
+extra_javascript:
+  # Este fichero es opcional y solo si se quiere sobreescribir la configuracion del plugin
+  #- js/extra.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+
+# 10. Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
