@@ -8,4 +8,6 @@
 * [Retos con Imagina TdR STEAM](../Referencia/Retos%20con%20Imagina%20TdR%20STEAM.pdf)
   
 * [Manual Actividades Imagina TdR STEAM](../Referencia/Manual%20Actividades%20Imagina%20TdR%20STEAM.pdf)
+
+* [wiki de keyestudio](https://wiki.keyestudio.com/Main_Page). En ellas buscamos la información de cada elemento keyestudio.
   

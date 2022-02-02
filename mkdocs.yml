@@ -40,6 +40,11 @@ nav:
     - Reto-08. Sensor de temperatura LM35: R08.md
     - Reto-09. Sensor de temperatura y humedad DHT-11: R09.md
     - Reto-10. Emisor y receptor de infrarrojos: R10.md
+    - Reto-11. Puerto de expansión I2C. La LCD de 2x16: R11.md
+    - Reto-12. Sensor de sonido o micrófono: R12.md
+    - Reto-13. Termohigrómetro: R13.md
+    - Reto-14. Bluetooth: R14.md
+    - Reto-15. IoT (WiFi): R15.md
   - Todos los programas de los retos: retos.md
   - Miscelanea:
     - Autor: Miscelanea/about.md 
