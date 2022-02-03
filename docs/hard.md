@@ -1,4 +1,4 @@
-# Hardware TdR STEAM
+# <FONT COLOR=#8B008B>Hardware TdR STEAM</font>
 
 La tabla siguiente es una descripción del hardware TdR-STEAM.
 

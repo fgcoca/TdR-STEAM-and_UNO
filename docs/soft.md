@@ -1,4 +1,4 @@
-# Software
+# <FONT COLOR=#8B008B>Software</font>
 Vamos a utilizar el lenguaje de programación visual por bloques denominado ArduinoBlocks. El aspecto de la plataforma al entrar lo vemos en la imagen siguiente:
 
 <center>

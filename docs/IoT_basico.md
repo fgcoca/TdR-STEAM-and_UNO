@@ -1,6 +1,6 @@
-# Teoría básica de IoT
+# <FONT COLOR=#8B008B>Teoría básica de IoT</font>
 
-## 1.- ¿Qué es la Internet de las Cosas?
+## <FONT COLOR=#007575>**1.- ¿Qué es la Internet de las Cosas?**</font>
 La expresión “Internet de las cosas” o IoT (del inglés, Internet of Things), internet de todas las cosas o internet en las cosas, hace referencia al uso que hacen de Internet los dispositivos conectados (las cosas) para comunicarse sin intervención humana directa. También se usa el término IoT para referirse al conjunto de estos dispositivos conectados comunicando “entre máquinas” (M2M) sin requerir interacción humana. No existe una Internet especial o diferente para “las cosas”, en principio, se opera con las mismas redes que en otros usos de Internet. En la imagen siguiente se grafica la conexión de elementos con la nube a través de la red.
 
 <center>
@@ -35,9 +35,9 @@ El más simple es el ESP-01, que solo dispone de 2 puertos digitales y necesita 
 
 </center>
 
-## 2.- Módulo ESP8266 ESP-01
+## <FONT COLOR=#007575>**2.- Módulo ESP8266 ESP-01**</font>
 
-### Introducción
+### <FONT COLOR=#AA0000>Introducción</font>
 El módulo WiFi ESP-01 es uno de las más populares y económicos, pese a no ser el más potente ni versátil. Actualmente, otros modelos como la ESP-12 o el el ESP32 se están integrando en la mayoría de placas de desarrollo, cobrando un peso e importancia mucho mayor. Sin embargo, nosotros vamos a asociar nuestro pequeño ESP-01 a una placa UNO, con el único fin de darle conectividad WiFi.
 
 El ESP-01 trae instalado una versión de firmware con la que podemos comunicarnos con el ESP8266 mediante comandos AT (veremos a continuación algunos de ellos) a través del puerto serie. Este tipo de comunicación nos va a permitir crear un puente entre la placa TdR STEAM y el ESP8266, consiguiendo así conectar a una red WiFi y dar un primer paso de gigantes en el mundo IoT.
@@ -66,7 +66,7 @@ GPIO (del inglés, General Purpose Input Output) son entradas o salidas de prop�
 
 El ESP-01 soporta comunicación I2C, por lo que, pese a tener solo un par de GPIOs, podemos conectarle multitud de sensores y actuadores a través del mencionado bus de datos I2C.
 
-### Programación
+### <FONT COLOR=#AA0000>Programación</font>
 El ESP-01 dispone de un microcontrolador y una memoria donde poder almacenar programas, luego es un dispositivo programable en si mismo. Cargar programas en el dispositivo es algo mas complejo de lo que hemos visto hasta ahora dado que tiene dos modos de operación, el modo flash o de ejecución y el modo UART o de grabación y debemos ser nosotros quienes activemos un modo u otro, cosa que hasta ahora el entorno ArduinoBlocks ha sido el encargado de hacerlo. Los modos de operación se configuran a través de los puertos GPIO0 y GPIO2.
 
 Para programar el ESP-01 hay que usar los pines Rx y Tx para transmitir los datos a la memoria Flash, donde se almacenará el sketch o programa.
@@ -106,7 +106,7 @@ Los programas los podemos subir a nuestro ESP-01 mediante el IDE de Arduino o po
 
 Se trata de un escudo o shield para el módulo WiFi ESP-01 que está provisto de un chip conversor de USB a puerto serie, en concreto el CH340G. El proceso de reprogramación con esta placa es bastante sencillo pero requiere de comando AT que pasamos a introducir antes de continuar.
 
-## 3.- Comando AT en el ESP8266
+## <FONT COLOR=#007575>**3.- Comando AT en el ESP8266**</font>
 El ESP-01 viene por defecto con el firmware AT ai-thinker V0.9.2.4. Los módems venían con un conjunto de comandos que permiten que nos podamos comunicar con ellos para configurarlos y que lo podamos hacer a través del puerto serie de ordenador al que están conectados. A estos comandos se les llama AT (de attention).
 
 Después de cada comando AT, el ESP8266 espera los caracteres especiales de nueva linea <CR><LF> para ejecutar el comando. El carácter no imprimible CR (del inglés, Carriage Return) significa retorno de carro y LF ( del inglés, Line Feed) es salto de línea. El origen de la nomenclatura está en las máquinas de escribir.
@@ -123,7 +123,7 @@ En la tabla siguiente damos un resumen de los comandos con una información ampl
 
 </center>
 
-## 4.- Preparación del módulo ESP-01
+## <FONT COLOR=#007575>**4.- Preparación del módulo ESP-01**</font>
 Primero conectamos el módulo ESP8266 a la shield USB-serie y este a su vez a un puerto USB de nuestro ordenador. Nos aseguramos de que el interruptor está en modo Flash Boot.
 
 Entramos en ArduinoBlocks con ArduinoBlocks-Connector en funcionamiento, realizamos un refresco de la lectura del puerto para que detecte a la shield del módulo WiFi si es necesario, abrimos la consola, escogeremos la opción de 115200 en baudrate y también la de NL + LF (NL + LF es igual que CR + LF) para comunicarnos con el módulo WiFi. Hacemos clic en Conectar y conectamos la consola, escribimos “AT” en ella y clic en enviar. La situación es la de la imagen siguiente:
@@ -162,7 +162,7 @@ Una vez que hemos configurado el módulo WiFi a la velocidad que nos interesa de
 
 Para saber mas acerca de la reprogramación de la velocidad de comunicación con ESP8266 visita el enlace: [Reprogramar la velocidad de comunicación del ESP8266](http://arduinoblocks.didactronica.com/2019/02/reprogramacion-del-modulo-esp-01-para/).
 
-## 5.- Una introducción al IoT a través de MQTT
+## <FONT COLOR=#007575>**5.- Una introducción al IoT a través de MQTT**</font>
 Si queremos trabajar en tareas de IoT debemos de utilizar algún protocolo de comunicación y hoy por hoy el principal es MQTT, pero antes de citar protocolos vamos a tratar algunos conceptos necesarios. Un protocolo de comunicación no es otra cosa que una serie de normas definidas para que dos o más dispositivos puedan comunicarse entre si de forma comprensible para ambos.
 
 * **Requisitos del IoT**
@@ -249,7 +249,7 @@ Existen básicamente tres tipos de brokers, los privados, los públicos y los lo
 
 Si queremos instalar nuestro propio broker en una raspberry o PC, sin duda [Mosquito](http://test.mosquitto.org/) es la opción más extendida.
 
-### 6.- Creación de un canal en un servidor MQTT
+## <FONT COLOR=#007575>**6.- Creación de un canal en un servidor MQTT**</font>
 
 En nuestro caso vamos a utilizar Thingspeak en su versión pública. Lo primero que debemos hacer es crear una cuenta, para lo que clicamos en Sign Up. Seguidamente, introducimos un correo electrónico válido y el resto de datos que nos pide. Lo vemos en la imagen siguiente:
 
@@ -319,7 +319,7 @@ Podemos aprender mas sobre el tema visitando los siguientes enlaces:
 - [Wifi con servidor gratuito con clave y contraseña y app móvil](https://youtu.be/AvXWOroK8BI)
 - [Cómo publicar y almacenar datos por Wifi en Internet con Thingspeak](https://didactronica.com/como-publicar-y-almacena-datos-por-wifi-en-internet/)
 
-## 7.- Filtrado por MAC
+## <FONT COLOR=#007575>**7.- Filtrado por MAC**</font>
 Si por cualquier motivo nuestra red WiFi tiene filtrado MAC debemos de dar de alta en la misma de nuestro dispositivo ESP-01. Esta es una tarea que va a depender de nuestro router y suministrador y que no resulta especialmente complicada. Lo primero que debemos hacer es averiguar la dirección MAC de nuestro dispositivo ESP8266. Esta tarea no la vamos a hacer desde ArduinoBlocks sino que vamos a recurrir al IDE de Arduino.
 
 Si necesitas ayuda para este tema seguro que la encuentras en estos [tutoriales de Luis Llamas](https://www.luisllamas.es/tutoriales-de-arduino/), o también puedes buscar información en tu navegador pues existen multitud de páginas referentes al tema de programación desde el IDE de Arduino.
